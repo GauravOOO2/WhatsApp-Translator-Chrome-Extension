@@ -52,6 +52,16 @@ No external dependencies are required for this project.
 - Open [WhatsApp Web](https://web.whatsapp.com).
 - The extension will automatically detect and translate messages based on the selected source and target languages.
 
+## Optimizations
+
+1. **Debouncing API Calls**
+- To avoid excessive API calls when new messages are rapidly added, debouncing is used. This ensures the translation function is triggered only after a short delay (e.g., 500ms) of inactivity, reducing redundant requests and improving performance.
+
+2. **Caching Translations**
+- A caching mechanism stores translations for previously processed texts. This prevents unnecessary API calls by retrieving translations from memory for repeated texts, further optimizing performance.
+
+
+
 ## Error Handling
 
 - If the monthly quota for characters in the free plan is exceeded, you will receive the following message:
